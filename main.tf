@@ -53,11 +53,6 @@ ignore_public_acls      = false
 restrict_public_buckets = false
 }
 
-  resource "aws_s3_bucket_acl" "bucket_acl" {
-    bucket = aws_s3_bucket.demo-bucket.id
-
-    acl="public-read-write"
-  }
 
   resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.demo-bucket.id
