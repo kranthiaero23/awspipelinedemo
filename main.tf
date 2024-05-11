@@ -3,16 +3,16 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "5.48.0"
     }
   }
 
-  required_version = ">= 1.2.0"
+  required_version = ">= 1.2"
 }
 
 provider "aws" {
   region                  = var.region
-  shared_credentials_file = "C:/Users/Kranthi.Vatti/.aws/credentials"
+  shared_credentials_files = ["C:/Users/Kranthi.Vatti/.aws/credentials"]
 }
 
 #Resource to create s3 bucket
